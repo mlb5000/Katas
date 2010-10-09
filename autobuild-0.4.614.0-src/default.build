@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project name="AutoBuild" default="run">
+    <loadtasks assembly="lib\nantcontrib\NAnt.Contrib.Tasks.dll" />
+
+    <property name="base-dir" value="${project::get-base-directory()}" />
+    <property name="solution-file-path" value="${base-dir}\src\AutoBuild.sln"/>
+    <property name="spec-output-dir" value="${base-dir}\src\AutoBuild.Specs\bin\${configuration}"/>
+    <property name="spec-assembly" value="AutoBuild.Specs.dll"/>
+    <property name="output-dir" value="output" />
+    <property name="package-dir" value="package" />
+
+    <property name="spec-reportdir" value="${base-dir}\doc" />
+    <property name="mspec-runner" value="mspec.exe" />
+    <property name="mspec-dir" value="${base-dir}\lib\Machine.Specifications" />
+    
+    <target name="run">
+        <call target="package"/>
+    </target>
+
+    <target name="package" depends="copy-output">
+        <mkdir dir="${package-dir}" />
+        <property name="build-version" value="${assemblyname::get-version(assemblyname::get-assembly-name('output\bin\AutoBuild.Core.dll'))}" />
+        <property name="package-name" value="autobuild-${build-version}-src.zip" />
+        <zip zipfile="${package-dir}\${package-name}">
+            <fileset basedir="${base-dir}">
+                <include name="**\*" />
+                <exclude name="**\_resharper*\**" />
+                <exclude name="package\**" />
+                <exclude name="src\**\obj\**" />
+                <exclude name="src\**\bin\**" />
+                <exclude name="src\**\*.suo" />
+                <exclude name="src\**\*.user" />
+                <exclude name="src\**\*.cache" />
+            </fileset>
+        </zip>
+    </target>
+
+    <target name="copy-output" depends="run-specs">
+        <copy todir="${output-dir}\bin">
+            <fileset basedir="${base-dir}\src\AutoBuild.Console\bin\${configuration}">
+                <include name="**" />
+                <exclude name="*.pdb" />
+            </fileset>
+        </copy>
+        <copy todir="${output-dir}\bin\NAnt">
+            <fileset basedir="${base-dir}\lib\NAnt\bin">
+                <include name="**" />
+            </fileset>
+        </copy>
+        <copy todir="${output-dir}\bin\NAntContrib">
+            <fileset basedir="${base-dir}\lib\NAntContrib">
+                <include name="**" />
+            </fileset>
+        </copy>
+        <copy file="${base-dir}\src\autobuild.template.build" tofile="${output-dir}\autobuild.build"/>
+        <copy file="${base-dir}\src\autobuild.template.cmd" tofile="${output-dir}\autobuild.cmd"/>
+    </target>
+
+    <target name="run-specs" depends="build-solution copy-test-dependencies">
+        <mkdir dir="${spec-reportdir}" />
+        <exec program="${mspec-runner}"
+                basedir="${mspec-dir}"
+                workingdir="${base-dir}">
+            <arg value="--html" />
+            <arg dir="${spec-reportdir}" />
+            <arg line="${spec-output-dir}\${spec-assembly}"/>
+        </exec>
+    </target>
+
+    <target name="build-solution" depends="clean">
+        <msbuild project="${solution-file-path}">
+            <property name="Configuration" value="${configuration}"/>
+        </msbuild>
+    </target>
+
+    <target name="copy-test-dependencies">
+        <copy todir="${spec-output-dir}\NAnt">
+            <fileset basedir="${base-dir}\lib\NAnt\bin">
+                <include name="**" />
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="clean" depends="update-version">
+        <delete failonerror="false">
+            <fileset basedir="${base-dir}">
+                <include name="src\**\bin\**" />
+                <include name="src\**\obj\**" />
+                <include name="output\**" />
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="update-version">
+        <exec program="tools\UpdateVersion\UpdateVersion.exe" commandline="-v Assembly -b MonthDay -r Fixed -s 2009-08-05 -i src\CommonAssemblyInfo.cs -o src\CommonAssemblyInfo.cs" verbose="true" />
+        <exec program="tools\UpdateVersion\UpdateVersion.exe" commandline="-v File -b MonthDay -s 2009-08-05 -i src\CommonAssemblyInfo.cs -o src\CommonAssemblyInfo.cs" verbose="true" />
+    </target>
+    
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="..\\TennisKata.Tests.Unit\bin\Debug\TennisKata.Tests.Unit.dll" total="18" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2010-10-09" time="14:40:39">
+  <environment nunit-version="2.5.5.10112" clr-version="2.0.50727.4206" os-version="Microsoft Windows NT 6.0.6002 Service Pack 2" platform="Win32NT" cwd="C:\Projects\Katas\10-9-2010\tools" machine-name="OFFICE" user="Matt" user-domain="OFFICE" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="..\\TennisKata.Tests.Unit\bin\Debug\TennisKata.Tests.Unit.dll" executed="True" result="Success" success="True" time="0.387" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TennisKata" executed="True" result="Success" success="True" time="0.370" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.367" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Unit" executed="True" result="Success" success="True" time="0.364" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="TennisKataTests" executed="True" result="Success" success="True" time="0.362" asserts="0">
+                    <results>
+                      <test-suite type="ParameterizedTest" name="BallWon_CausesGameOver_ThrowsException" executed="True" result="Success" success="True" time="0.307" asserts="0">
+                        <results>
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.BallWon_CausesGameOver_ThrowsException(4,3,Left)" executed="True" result="Success" success="True" time="0.037" asserts="0" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.BallWon_CausesGameOver_ThrowsException(4,5,Right)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.BallWon_CausesGameOver_ThrowsException(124,125,Right)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.BallWon_CausesGameOver_ThrowsException(5,4,Left)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="ParameterizedTest" name="TennisKataScoreTests" executed="True" result="Success" success="True" time="0.033" asserts="0">
+                        <results>
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(3,3,Left,&quot;Advantage Left&quot;)" executed="True" result="Success" success="True" time="0.018" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(0,0,None,&quot;Left: love Right: love&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(0,0,Left,&quot;Left: fifteen Right: love&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(4,4,Left,&quot;Advantage Left&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(2,0,Left,&quot;Left: forty Right: love&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(0,0,Right,&quot;Left: love Right: fifteen&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(0,1,Right,&quot;Left: love Right: thirty&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(0,2,Right,&quot;Left: love Right: forty&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(3,2,Right,&quot;deuce&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(2,1,Right,&quot;Left: thirty Right: thirty&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(4,3,Right,&quot;deuce&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(3,3,Right,&quot;Advantage Right&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(4,4,Right,&quot;Advantage Right&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="TennisKata.Tests.Unit.TennisKataTests.TennisKataScoreTests(1,0,Left,&quot;Left: thirty Right: love&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

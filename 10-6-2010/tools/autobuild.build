@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project name="AutoBuild" default="run">
+    <loadtasks assembly="bin\NAntContrib\NAnt.Contrib.Tasks.dll" />
+
+    <property name="configuration" value="Debug"/>
+    <property name="Platform" value="Any CPU"/>
+	<property name="base-dir" value="${project::get-base-directory()}" />
+    <property name="base-dir" value="..\" />
+	<property name="solution-file-path" value="${base-dir}\TennisKata\TennisKata.sln"/> 
+    <property name="unit-test-assembly-path" value="${base-dir}\TennisKata.Tests.Unit\bin\Debug\TennisKata.Tests.Unit.dll"/>
+
+    <target name="run">
+		<call target="run-unit-tests-console"/>  
+    </target>
+    
+    <target name="build-solution">
+        <msbuild project="${solution-file-path}">
+		  <property name="Configuration" value="${configuration}"/>
+		  <property name="Platform" value="${Platform}"/>
+		</msbuild>
+    </target>
+
+    <target name="run-unit-tests" depends="build-solution">
+		<mkdir dir="log"/>
+		<nunit2 verbose="true">
+        <formatter type="Xml" usefile="true" outputdir="log" extension=".xml"/>
+        <formatter type="Plain" usefile="true" outputdir="log" extension=".txt"/>
+            <test assemblyname="${unit-test-assembly-path}" appconfig="my.conf"/>
+		</nunit2>
+    </target>
+
+    <target name="run-unit-tests-console" depends="build-solution">
+			<exec program = "C:\Projects\Katas\NUnit-2.5.5-bin\net-2.0\nunit-console.exe" output="out.txt">
+					<arg value="${unit-test-assembly-path}"/>
+			</exec>
+	</target>
+</project>

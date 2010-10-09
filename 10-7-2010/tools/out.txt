@@ -1,0 +1,16 @@
+NUnit version 2.5.5.10112
+Copyright (C) 2002-2009 Charlie Poole.
+Copyright (C) 2002-2004 James W. Newkirk, Michael C. Two, Alexei A. Vorontsov.
+Copyright (C) 2000-2002 Philip Craig.
+All Rights Reserved.
+
+Runtime Environment - 
+   OS Version: Microsoft Windows NT 6.0.6002 Service Pack 2
+  CLR Version: 2.0.50727.4206 ( Net 2.0 )
+
+ProcessModel: Default    DomainUsage: Single
+Execution Runtime: net-2.0
+........................
+Tests run: 24, Errors: 0, Failures: 0, Inconclusive: 0, Time: 0.179 seconds
+  Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="AutoBuild" default="run">
+    <loadtasks assembly="lib\nantcontrib\NAnt.Contrib.Tasks.dll" />
+
+    <property name="configuration" value="debug"/>
+    <property name="base-dir" value="${project::get-base-directory()}" />
+    <property name="solution-file-path" value="${base-dir}\src\AutoBuild.sln"/>
+    <property name="spec-assembly-path" value="${base-dir}\src\AutoBuild.Specs\bin\${configuration}\AutoBuild.Specs.dll"/>
+
+    <property name="mspec-runner" value="mspec.exe" />
+    <property name="mspec-dir" value="${base-dir}\lib\Machine.Specifications" />
+
+    <target name="run">
+        <call target="run-specs"/>
+    </target>
+    
+    <target name="build-solution">
+        <msbuild project="${solution-file-path}">
+		  <property name="Configuration" value="${configuration}"/>
+		</msbuild>
+    </target>
+    
+    <target name="run-specs" depends="build-solution">
+        <exec program="${mspec-runner}"
+                basedir="${mspec-dir}"
+                workingdir="${base-dir}">
+            <arg line="${spec-assembly-path}"/>
+        </exec>
+    </target>
+</project>

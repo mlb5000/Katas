@@ -1,0 +1,22 @@
+﻿NUnit Add-in for Growl Notifications
+http://nunitgrowladdin.codeplex.com/
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+INSTALLATION
+
+1. Close all running NUnit instances.
+2. Extract/copy files to the NUnit addins folder (typically, "C:\Program Files\<NUnit folder>\bin\net-2.0\addins").
+
+
+UNINSTALLATION
+
+1. Close all running NUnit instances.
+2. Delete the following files:
+   2.1. NUnitGrowlAddIn.*
+   2.2. Growl.* (if you do not have another NUnit add-in using these Growl libraries).
+
+
+NOTES
+
+Add-in settings are configured in the NUnitGrowlAddIn.dll.config.

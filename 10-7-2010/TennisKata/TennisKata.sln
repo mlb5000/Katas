@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisKata", "TennisKata.csproj", "{57060297-D298-4F4C-8993-3F295518ECEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisKata.Tests.Unit", "..\TennisKata.Tests.Unit\TennisKata.Tests.Unit.csproj", "{E84D3625-4BBF-4867-8950-0EB938E773DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57060297-D298-4F4C-8993-3F295518ECEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57060297-D298-4F4C-8993-3F295518ECEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57060297-D298-4F4C-8993-3F295518ECEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57060297-D298-4F4C-8993-3F295518ECEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84D3625-4BBF-4867-8950-0EB938E773DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84D3625-4BBF-4867-8950-0EB938E773DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84D3625-4BBF-4867-8950-0EB938E773DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84D3625-4BBF-4867-8950-0EB938E773DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
