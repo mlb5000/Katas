@@ -6,11 +6,11 @@ This is a place for me to store my Kata solutions for the world to see.  Hopeful
 
 h2. Performed Katas
 
-* 10-4-2010 - FizzBuzz
-* 10-5-2010 - Tennis
-* 10-6-2010 - Tennis
-* 10-7-2010 - Tennis
-* 10-9-2010 - Tennis
+* "10-4-2010 - FizzBuzz":http://github.com/mlb5000/Katas/tree/master/10-4-2010/
+* "10-5-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-5-2010/
+* "10-6-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-6-2010/
+* "10-7-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-7-2010/
+* "10-9-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-9-2010/
 
 h2. Toolset
 
