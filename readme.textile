@@ -11,3 +11,12 @@ h2. Performed Katas
 * 10-6-2010 - Tennis
 * 10-7-2010 - Tennis
 * 10-9-2010 - Tennis
+
+h2. Toolset
+
+* Visual Studio 2008
+** "ReSharper 4.5":http://http://www.jetbrains.com/resharper
+* "AutoBuild 0.4.614.0":http://code.google.com/p/autotestnet
+* "KeyJedi":http://weblogs.asp.net/rosherove/archive/2007/06/03/train-to-be-a-keyboard-master-with-keyboard-jedi.aspx
+* "NUnit 2.5.5":http://nunit.org
+* "Rhino Mocks 3.6":http://www.ayende.com/projects/rhino-mocks.aspx (haven't really used this in any solutions yet)
