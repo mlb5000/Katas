@@ -1,0 +1,14 @@
+h1. Notes
+
+FizzBuzz is the simplest of all TDD exercises, but it's also the easiest to get carried away on.  The solution is so simple that it's very easy to miss test cases and not take the necessary baby steps.  Such is the case with this solution.  If you look at "FizzBuzzTests.cs":http://github.com/mlb5000/Katas/blob/master/10-4-2010/KataFizzBuzz/KataFizzBuzz.Tests.Unit/FizzBuzzTests.cs you'll see that there are only four test cases:
+
+* 1, "1"
+* 3, "Fizz"
+* 5, "Buzz"
+* 15, "FizzBuzz"
+
+These test cases are correct, but if I were to change Line 8 or 9 in "FizzBuzz.cs":http://github.com/mlb5000/Katas/blob/master/10-4-2010/KataFizzBuzz/KataFizzBuzz/FizzBuzz.cs from number% to number== these tests would still pass.  Really I should have started off with number== to follow the "Simplest Step" rule of TDD.  By taking the simplest (possibly even hacky) possible action to make a test pass it forces my test suite to be more comprehensive.  There should be at least three more test cases here:
+
+* 6, "Fizz"
+* 10, "Buzz"
+* 30, "FizzBuzz"
