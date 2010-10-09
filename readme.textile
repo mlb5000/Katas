@@ -1,0 +1,13 @@
+h1. Katas
+
+h2. Purpose
+
+This is a place for me to store my Kata solutions for the world to see.  Hopefully this will keep me motivated and accountable for my results.  I'll also post any afterthoughts or observations associated with a particular solution (e.g. stuff I did wrong, a noticeable omission from my test cases, etc.).  However, I will not simply modify these solutions to make them better, I'll do the Kata over again from beginning to end.
+
+h2. Performed Katas
+
+* 10-4-2010 - FizzBuzz
+* 10-5-2010 - Tennis
+* 10-6-2010 - Tennis
+* 10-7-2010 - Tennis
+* 10-9-2010 - Tennis
