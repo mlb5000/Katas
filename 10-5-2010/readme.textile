@@ -1,0 +1,36 @@
+h1. Notes
+
+This was my first stab at "KataTennis":http://codingdojo.org/cgi-bin/wiki.pl?KataTennis.  Looking back I've noticed several things.
+
+h2. Test Cases
+
+# Should probably have covered the deuce boundaries better (2-2), (3-3), (4-4).
+# Should probably have covered the advantage boundaries better (4-3), (5-4)
+# I should have concentrated on making one side of the ScoreDescription work at a time.  There are a lot of cases focusing on the Right side that are probably missing.
+# Should have covered various winning conditions better (4-0), (4-2), (5-3), (6-4), (7-5)
+
+h2. Design
+
+This design is not great.
+
+h3. Match Class
+
+The Match class has **too many responsibilities**
+
+# Award Points to each side
+# Determining the state of the match between the two sides (score, deuce, advantage, etc.).  Really this should be done using comparisons operations between the two Side instances.
+# Formatting the Score output
+
+Checking for Advantage twice is inefficient and doesn't read well.  WinnerString handling both the case where there is a winner and when there isn't (and instead returning the current score) is misleading.
+
+Tenary is highly abused and hurts readability.
+
+If this class were actually used in a game engine, how could the caller be notified of the game ending aside from looking for the word WINNER in the ScoreDescription output?
+
+h3. Side Class
+
+With the way Match is currently designed, why have this?  It just encapsulates a Score instance (but not really since Score is a public property), and Side has no behavior of its own.  Match may as well contain two score objects.
+
+h3. Score Class
+
+This is mostly OK, but exposing Value is probably not desired.  Maybe an Increment method would be more clear.  ValueString, while unfortunately named, is as simple as it can be.  I also didn't care to extend the 0, 15, 30, 40 point scoring convention into my solution since it pollutes readability.  Instead I kept track of points and allowed the Score class to represent each point as appropriate in Tennis lingo.

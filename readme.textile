@@ -2,15 +2,20 @@ h1. Katas
 
 h2. Purpose
 
-This is a place for me to store my Kata solutions for the world to see.  Hopefully this will keep me motivated and accountable for my results.  I'll also post any afterthoughts or observations associated with a particular solution (e.g. stuff I did wrong, a noticeable omission from my test cases, etc.).  However, I will not simply modify these solutions to make them better, I'll do the Kata over again from beginning to end.
+This is a place for me to store my Kata solutions for the world to see.  Hopefully this will keep me motivated and accountable for my results.  A few days after I finish a solution I'll post any afterthoughts or observations associated with a particular solution (e.g. stuff I did wrong, a gross implementation, a noticeable omission from my test cases, etc.).  However, I will not simply modify these solutions to make them better, I'll do the Kata over again from beginning to end.  My goal is for this to show noticeable progression over time.
 
 h2. Performed Katas
 
-* "10-4-2010 - FizzBuzz":http://github.com/mlb5000/Katas/tree/master/10-4-2010/
-* "10-5-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-5-2010/
-* "10-6-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-6-2010/
-* "10-7-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-7-2010/
-* "10-9-2010 - Tennis":http://github.com/mlb5000/Katas/tree/master/10-9-2010/
+h3. FizzBuzz
+
+* "10-4-2010":http://github.com/mlb5000/Katas/tree/master/10-4-2010/
+
+h3. Tennis
+
+* "10-5-2010":http://github.com/mlb5000/Katas/tree/master/10-5-2010/
+* "10-6-2010":http://github.com/mlb5000/Katas/tree/master/10-6-2010/
+* "10-7-2010":http://github.com/mlb5000/Katas/tree/master/10-7-2010/
+* "10-9-2010":http://github.com/mlb5000/Katas/tree/master/10-9-2010/
 
 h2. Toolset
 
